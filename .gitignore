@@ -1,6 +1,11 @@
 # Dependencies
 node_modules/
 
+# Built executables
+index-linux
+index-macos
+index-win.exe
+
 # Logs
 *.log
 npm-debug.log*

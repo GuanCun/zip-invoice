@@ -22,11 +22,12 @@ npm install
 
 ## 使用方法
 
-### 方式一：打包成可执行文件（推荐）
+### 方式一：下载可执行文件（推荐）
 
-项目已提供打包好的可执行文件：
+从 [GitHub Releases](https://github.com/GuanCun/zip-invoice/releases) 下载对应系统的可执行文件：
 - `index-linux`（Linux 系统）
 - `index-macos`（macOS 系统）
+- `index-win.exe`（Windows 系统）
 
 **使用步骤：**
 
@@ -38,7 +39,17 @@ npm install
 ### 方式二：直接运行脚本
 
 ```bash
+npm install
 node index.js
+```
+
+### 方式三：自行打包
+
+如需自行打包可执行文件：
+
+```bash
+npm install -g pkg
+pkg index.js --targets node18-linux-x64,node18-macos-x64,node18-win-x64 --output index
 ```
 
 ## 输入格式（QQ 邮箱导出）
@@ -82,15 +93,6 @@ PDF 文件将被重命名为：`YYMMDD-发票类型-金额.pdf`
 - `unzipper`：解压 ZIP 文件
 - `xlsx`：读取 Excel 文件
 - `readline`：命令行交互
-
-## 打包可执行文件
-
-如需重新打包，可使用 [pkg](https://github.com/vercel/pkg)：
-
-```bash
-npm install -g pkg
-pkg index.js --targets node18-linux-x64,node18-macos-x64 --output index
-```
 
 ## 许可
 
